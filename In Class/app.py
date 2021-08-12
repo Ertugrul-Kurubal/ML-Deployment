@@ -19,3 +19,9 @@ st.info("This is Information")
 # help
 st.warning("This is a warning")
 st.error("Stop. That give an error")
+
+# get help
+st.help(range)
+
+# writing text
+st.write("Writing example text with write function")

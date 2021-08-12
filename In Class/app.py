@@ -25,3 +25,13 @@ st.help(range)
 
 # writing text
 st.write("Writing example text with write function")
+
+# importing images
+
+from PIL import Image
+img = Image.open("Machine Learning.jpg")
+st.image(img, width=200, caption="my_image")
+
+# my_video=open(,rb)
+# st.video(my_video)
+st.video("https://www.youtube.com/watch?v=TUVcZfQe-Kw")

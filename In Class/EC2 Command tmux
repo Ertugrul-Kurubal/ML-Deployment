@@ -1,0 +1,40 @@
+   5  sudo yum update  -y
+    6  clear
+    8  python3 -m venv env
+    9  ls
+   10  source env/bin/activate
+   11  mkdir APP
+   12  cd APP/
+   13  ls
+   14  pip3 install streamlit
+   15  clear
+   16  exit
+   17  cd
+   18  ls
+   19  source env/bin/activate
+   20  cd APP/
+   21  ls
+   22  streamlit run app.py 
+   23  streamlit run app.py  &
+   24  clear
+   25  ps
+   26  kill 8080
+   27  ps
+   28  sudo yum install tmux
+   29  clear
+   30  tmux ls
+   33  tmux new-session -s st
+   38  streamlit run app.py 
+   40  source env/bin/activate
+   42  streamlit run APP/app.py  &
+   45  tmux ls
+   48  ps
+   49  tmux ls
+   50  tmux
+   57  tmux new-session -s test
+   58  tmux attach -t test
+   60  tmux new-session -s test2
+   61  tmux ls
+   62  tmux kill-session -t test
+   64  tmux ls
+   65  history

@@ -10,4 +10,5 @@ st.subheader("Select Car Features And Predict Price")
 
 
 st.sidebar.success("Features Selection")
-st.sidebar.radio('Select Car Brand', ["Audi","BMW","Mercedes"])
+st.sidebar.radio('Select Car Model', ["Audi","BMW","Mercedes"])
+st.sidebar.radio('Select Gearing Type', ["Automatic","Semi-Auto","Manuel"])

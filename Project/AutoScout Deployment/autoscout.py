@@ -13,8 +13,11 @@ st.subheader("Select Car Features And Predict Price")
 
 
 st.sidebar.success("Features Selection")
-st.sidebar.radio('Select Car Model', ['A1','A3','Astra','Corsa','Insignia','Clio','Espace'])
-st.sidebar.radio('Select Gearing Type', ["Automatic","Semi-Auto","Manuel"])
-st.sidebar.slider("Power Of The Car (hp)",1,1000)
-st.sidebar.slider("Mileage Of The Car (km)",0,2000000)
-st.sidebar.slider("Age Of The Car (year)",0,100)
+model = st.sidebar.radio('Select Car Model', ['A1','A3','Astra','Corsa','Insignia','Clio','Espace'])
+gearing_type = st.sidebar.radio('Select Gearing Type', ["Automatic","Semi-Auto","Manuel"])
+hp = st.sidebar.slider("Power Of The Car (hp)",1,1000)
+km = st.sidebar.slider("Mileage Of The Car (km)",0,2000000)
+age = st.sidebar.slider("Age Of The Car (year)",0,100)
+
+# Model
+model=pickle.load(open("lasso_final_model", "rb"))

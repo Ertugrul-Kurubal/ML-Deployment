@@ -22,6 +22,9 @@ age = st.sidebar.slider("Age Of The Car (year)",0,100)
 # Model
 model=pickle.load(open("lasso_final_model", "rb"))
 
+# Scale
+scaler=pickle.load(open("scaler", "rb"))
+
 # Data
 my_dict = {
     "hp": hp,
@@ -41,4 +44,5 @@ my_dict
 # Scale
 my_dict = scaler.transform(my_dict)
 
+# Predict
 model.predict(my_dict)

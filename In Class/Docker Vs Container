@@ -1,0 +1,31 @@
+    Docker
+    
+    1  sudo su   -- komut satırının başında root yazmıyorsa root a bu komut ile giriliyor      yoksa docker yüklerken permission hatası veriyor.
+    2  sudo amazon-linux-extras install docker -y
+    3  sudo systemctl start docker
+    4  docker ps
+    5  docker pull nginx
+    6  sudo yum update
+    7  docker run -dit -p 81:80 nginx
+    8  docker ps
+    9  docker image
+   10  docker image ls
+   11  docker exec -it 9f2 bash
+   
+   
+   Continer  
+    
+    1  pwd
+    2  cd /usr/share/nginx/html/
+    3  history
+    4  apt-get install nano
+    5  nano index.html
+    6  echo "Welcome to my home page" > index.html
+    7  docker ps
+    8  /usr/share/nginx/html/
+    9  ls
+   10  cat index.html 
+   11  apt-get update
+   12  apt-get install nano
+   13  nano index.html 
+   14  history

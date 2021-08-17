@@ -12,9 +12,9 @@ st.subheader("Select Car Features And Predict Price")
 st.sidebar.header("Features Selection")
 model = st.sidebar.radio('Select Car Model', ['A1','A3','Astra','Corsa','Insignia','Clio','Espace'])
 gearing_type = st.sidebar.radio('Select Gearing Type', ["Automatic","Semi-Auto","Manuel"])
-hp = st.sidebar.slider("Power Of The Car (hp)",1,1000)
-km = st.sidebar.slider("Mileage Of The Car (km)",0,2000000)
-age = st.sidebar.slider("Age Of The Car (year)",0,100)
+hp = st.sidebar.slider("Power Of The Car (hp)",1,500)
+km = st.sidebar.slider("Mileage Of The Car (km)",0,250000)
+age = st.sidebar.slider("Age Of The Car (year)",0,50)
 
 if model == "A1":
     img = Image.open("D:\Data Scientist\Data Science\ML-Deployment\Project\AutoScout Deployment\A1_1.jpg")
@@ -63,18 +63,20 @@ my_dict = {
 }
 
 # DataDrame
-my_dict = pd.DataFrame([my_dict])
+my_dict_1 = pd.DataFrame([my_dict])
 
 # Dummies
-my_dict = pd.get_dummies(my_dict).reindex(columns=X_columns, fill_value=0)
+my_dict_2 = pd.get_dummies(my_dict_1).reindex(columns=X_columns, fill_value=0)
+
+#st.table(my_dict_2)
 
 # Scale
-my_dict = scaler.transform(my_dict)
+my_dict_3 = scaler.transform(my_dict_2)
 
 # Predict
-pred_result = model.predict(my_dict)
+pred_result = model.predict(my_dict_3)
 
-# st.subheader("Press Predict")
+#st.subheader("Press Predict")
 if st.button("Predict"):
     prediction = pred_result
-    st.success("The Car Price Prediction is {}. ".format(int(prediction)))
+    st.success("The Car Price Prediction is ${}. ".format(int(prediction)))

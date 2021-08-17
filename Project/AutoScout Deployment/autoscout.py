@@ -68,7 +68,7 @@ my_dict_1 = pd.DataFrame([my_dict])
 # Dummies
 my_dict_2 = pd.get_dummies(my_dict_1).reindex(columns=X_columns, fill_value=0)
 
-#st.table(my_dict_2)
+# st.table(my_dict_2)
 
 # Scale
 my_dict_3 = scaler.transform(my_dict_2)

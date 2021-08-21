@@ -7,12 +7,14 @@ test_data = {
     "age": 1,
     "km": 50000,
     "model": 'A3',
-    "gearing_type": "Automatic",
+    "gearing_type": "Manual",
     "fuel":"electric",
-    "body_color":"Brown"
+    "body_color":"Black"
 }
 
-response = requests.get(url)
+response = requests.post(url, data = test_data)
 #response = requests.post(url, data=test_data )
 
 print(response.text)
+
+

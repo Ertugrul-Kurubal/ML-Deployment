@@ -42,7 +42,7 @@
      <option value="Manual">Manual</option>
      <option value="Semi-automatic">Semi-automatic</option>
      <option value="Automatic">Automatic</option>
- </select> <br>
+ </select><br>
     
  
     <label for="body_color">BODY COLOR</label> <br>
@@ -62,7 +62,16 @@
         <option value="Yellow">Yellow</option>
         <option value="Others">Other</option>
     </select> <br>
-<input type="submit" value="P R E D I C T">
+<input type="submit" value="P R E D I C T">  
+<p>
+
+    {% if result%}
+    {{ result }}
+    {%else%}
+    no prediction made
+    {%endif%}
+
+</p>
 
     </form>
 </body>

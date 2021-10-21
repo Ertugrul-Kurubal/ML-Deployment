@@ -38,3 +38,4 @@
    62  tmux kill-session -t test
    64  tmux ls
    65  history
+   66  pip install --upgrade pip
